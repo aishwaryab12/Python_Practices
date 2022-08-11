@@ -1,4 +1,4 @@
-'''
+
 # String & methods
 msg = 'day 1'
 
@@ -46,8 +46,41 @@ print (sample_url[::-1]) #reverse string
 print (sample_url[-3:]) #print only com
 print(sample_url[len(sample_url)-3:])
 
-'''
+
 
 #string formatting
 
+#dicts
+person = {'name':'ana', 'age': 45}
+sentence = 'Hello! My name is {0}. I am {1} years old'.format(person['name'],person['age'])
+print (sentence)
 
+#list
+l = ['ana','45']
+sentence = 'hello! my name is {0[0]}, I am {0[1]} years old.'.format(l)
+print(sentence)
+
+#placeholder
+
+sentence='hello! my name is {name}. I am {age} years old'.format(name='ana',age='45')
+print(sentence)
+
+#unpacking dict
+person = {'name':'ana', 'age': 45}
+sentence = 'Hello! My name is {name}. I am {age} years old'.format(**person)
+print (sentence)
+
+#adding padding to digits
+
+for i in range(0,11):
+    print('The value is {:02}'.format(i))
+
+pi=3.14159
+print('The value of pi is {:.2f}'.format(pi))
+
+#formatting dates
+
+import datetime
+my_date = datetime.datetime(2022,9,22,5,24,34,44)
+print(my_date)
+print('{:%B %d , %Y}'.format(my_date))
